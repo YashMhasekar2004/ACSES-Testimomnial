@@ -1,0 +1,82 @@
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Shield } from "lucide-react"
+import Link from "next/link"
+
+export default function LoginPage() {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-4">
+      <div className="max-w-md w-full bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="p-6 sm:p-8">
+          <div className="flex justify-center mb-6">
+            <Shield className="h-12 w-12 text-purple-600" />
+          </div>
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
+            SafeGuard: Women's Safety Portal
+          </h2>
+          <p className="text-center text-gray-600 mb-6">
+            Log in to access safety resources and support
+          </p>
+          <form className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                Email
+              </Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="your@email.com"
+                required
+                className="w-full px-3 py-2 border rounded-md"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password" className="text-sm font-medium text-gray-700">
+                Password
+              </Label>
+              <Input
+                id="password"
+                type="password"
+                required
+                className="w-full px-3 py-2 border rounded-md"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                />
+                <Label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+                  Remember me
+                </Label>
+              </div>
+              <div className="text-sm">
+                <Link href="/forgot-password" className="font-medium text-purple-600 hover:text-purple-500">
+                  Forgot your password?
+                </Link>
+              </div>
+            </div>
+            <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+              Log in
+            </Button>
+          </form>
+        </div>
+        <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 sm:px-8">
+          <p className="text-xs leading-5 text-gray-500">
+            Don't have an account?{" "}
+            <Link href="/signup" className="font-medium text-purple-600 hover:text-purple-500">
+              Sign up
+            </Link>
+          </p>
+        </div>
+      </div>
+      <p className="mt-8 text-center text-sm text-gray-600">
+        If you're in immediate danger, please call your local emergency number.
+      </p>
+    </div>
+  )
+}

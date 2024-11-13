@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indirect link</title>
+</head>
+<body>
+    <form action = "https://www.google.com/search">
+        <input type=" text " placeholder="search in Google" name ="q"/>
+        <button> search </button>
+        <button type="reset">reset</button>
+        <hr>
+        <input type="checkbox" name = "review" id="google"/>
+         <label for="google"> tick if your search result was accurate</label>
+
+         
+         <hr> 
+         <div>
+            <h4>Please give the review</h4>
+            <input type="radio" name ="review" id="g">
+            <label for="g">good</label>
+
+            <input type="radio" name ="review" id="b">
+            <label for="b">better</label>
+
+            <input type="radio" name ="review" id="bst">
+            <label for="bst">best</label>
+            <button type="reset">reset</button>
+         </div>
+         <hr>
+         <select name = "interset" id="interset">
+            <option>Select your interset</option>
+            <option value ="Sing">Singing</option>
+            <option value="dance">Dancing</option>
+            <option value="Sketch">Sketching</option>
+            <option value="Quill">Quilling</option>
+            <option value="Other">Other</option>
+         </select>
+         <br>
+         <div>
+             <label for ="efficiency"> rate yourself in the form of range how much you are efficient in your interset :</label>
+             <input type="range" min="0" max="10" name="efficiency"/>
+             <button type="reset">reset</button>
+         </div>
+         <div>
+            <label for = " feedback "> Please give your valuable feedback in discription : </label>
+            <textarea id ="feedback" name="feedback" placeholder="enter your experience"></textarea>
+            <button type="reset">clear</button>
+         </div>
+         <br>
+         <button type="submit">submit</button>
+    </form>
+    
+</body>
+</html>
